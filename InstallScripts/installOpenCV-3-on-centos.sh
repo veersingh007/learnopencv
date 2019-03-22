@@ -2,10 +2,10 @@
 
 echo "OpenCV installation by learnOpenCV.com"
 
-echo "Installing OpenCV - 3.4.4"
+echo "Installing OpenCV - 3.4"
  
 #Specify OpenCV version
-cvVersion="3.4.4"
+cvVersion="3.4"
 
 # Clean build directories
 rm -rf opencv
@@ -30,7 +30,7 @@ sudo rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release
 sudo yum install -y ffmpeg
 sudo yum install -y ffmpeg-devel
 
-ssudo yum install -y libpng-devel
+sudo yum install -y libpng-devel
 sudo yum install -y jasper-devel
 sudo yum install -y openexr-devel
 sudo yum install -y libwebp-devel
@@ -68,12 +68,12 @@ deactivate
 
 git clone https://github.com/opencv/opencv.git
 cd opencv
-git checkout 3.4
+git checkout "$cvVersion"
 cd ..
  
 git clone https://github.com/opencv/opencv_contrib.git
 cd opencv_contrib
-git checkout 3.4
+git checkout "$cvVersion"
 cd ..
 
 cd opencv
